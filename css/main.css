@@ -218,51 +218,45 @@ body::before {
     background-color: white !important;
 }
 
-.Skin label.MultipleAnswer > span,
-.Skin label.SingleAnswer > span {
+.Skin label.SingleAnswer > span,
+.Skin label.MultipleAnswer > span {
     font-family: "Proxima N W01 Bold", sans-serif !important;
     font-weight: 500 !important;
     font-size: 18px !important;
     line-height: 1.4 !important;
-    margin-left: 32px;
+    margin-left: 30px;
 
     color: white;
 }
 
-.Skin label.MultipleAnswer > span::before,
-.Skin label.SingleAnswer > span::before {
+.Skin label.SingleAnswer > span::before,
+.Skin label.MultipleAnswer > span::before {
     border: 2px solid #fff !important;
 }
 
-.Skin label.MultipleAnswer.q-checked > span,
-.Skin label.SingleAnswer.q-checked > span {
+.Skin label.SingleAnswer.q-checked > span,
+.Skin label.MultipleAnswer.q-checked > span {
     color: #00838f !important;
 }
 
-.Skin label.MultipleAnswer.q-checked > span::before,
-.Skin label.SingleAnswer.q-checked > span::before {
-    border: 2px solid #3DA3AE !important;
+.Skin label.SingleAnswer.q-checked > span::before,
+.Skin label.MultipleAnswer.q-checked > span::before {
+    border: 2px solid #3da3ae !important;
+    background-size: 60% !important;
 }
 
 .Skin label.SingleAnswer > span::before,
 .Skin label.MultipleAnswer > span::before {
-    height: 38px;
-    width: 38px;
-    border-radius: 38px;
-}
+    height: 26px;
+    width: 26px;
 
-.Skin label.MultipleAnswer > span::before, .Skin label.SingleAnswer > span::before {
     transform: translateY(-50%) !important;
     margin-top: 0 !important;
     background-size: 60% !important;
 }
 
-.Skin label.MultipleAnswer > span, .Skin label.SingleAnswer > span {
-    margin-left: 40px !important;
-}
-
-.Skin label.MultipleAnswer.q-checked > span::before, .Skin label.SingleAnswer.q-checked > span::before {
-    background-size: 60% !important;
+.Skin label.MultipleAnswer > span::before {
+    border-radius: 50%;
 }
 
 /* buttons */
