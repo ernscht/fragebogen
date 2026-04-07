@@ -253,9 +253,11 @@ body::before {
     transform: translateY(-50%) !important;
     margin-top: 0 !important;
     background-size: 60% !important;
+
+    border-radius: 0;
 }
 
-.Skin label.MultipleAnswer > span::before {
+.Skin label.SingleAnswer > span::before {
     border-radius: 50%;
 }
 
