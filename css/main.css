@@ -1,0 +1,318 @@
+body::after {
+    content: "CSS";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #fee;
+    border: 1px dotted orange;
+}
+
+.LanguageSelectorContainer {
+    display: none !important;
+}
+
+.Skin #SkinContent {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.Skin #SkinContent legend label {
+    max-width: 770px !important;
+}
+
+.Skin .QuestionText {
+    padding-bottom: 0 !important;
+    padding: 16px !important;
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+}
+
+.Skin .QuestionText,
+.Skin .QuestionText div,
+.Skin .QuestionOuter fieldset > legend,
+.Skin .QuestionOuter fieldset > legend label.QuestionText,
+#risk-result-wrapper div,
+#EndOfSurvey {
+    background-color: #fff !important;
+    color: #484952 !important;
+    font-size: 16px !important;
+    font-family: "Proxima N W01 Bold", sans-serif !important;
+}
+
+.Skin .QuestionText h2 {
+    font-size: 23px !important;
+    font-weight: bold !important;
+}
+
+.Skin .QuestionText h3 {
+    font-size: 20px !important;
+    font-weight: bold !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+}
+
+.Skin .QuestionText h4 {
+    font-size: 18px !important;
+    font-weight: bold !important;
+}
+
+.Skin .QuestionText h1,
+.Skin .QuestionText h2,
+.Skin .QuestionText h3,
+.Skin .QuestionText h4 {
+    margin-bottom: 10px !important;
+}
+
+.Skin .QuestionText ol,
+.Skin .QuestionText ul {
+    padding-inline-start: 20px !important;
+}
+
+.Skin .QuestionBody {
+    margin-block: 12px !important;
+    margin-inline: auto !important;
+    max-width: 770px !important;
+}
+
+.Skin .QuestionBody .ChoiceStructure .InputText,
+.Skin .QuestionBody .ChoiceStructure input[type="text"].InputText {
+    display: block !important;
+    width: 170px !important;
+    height: 80px !important;
+    background-color: #ffffff !important;
+    border: none !important;
+    border-bottom: 4px solid #00838f !important;
+    font-size: 50px !important;
+    font-weight: 700;
+    line-height: 1.33333 !important;
+    color: #00838f !important;
+    text-align: center !important;
+    margin: 20px auto !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.Skin .QuestionBody .ChoiceStructure {
+    margin-inline: 12px !important;
+}
+
+#SurveyEngineBody .Skin #Buttons #NextButton,
+.Skin #Buttons #PreviousButton {
+    display: inline-block;
+    padding: 9px 24px 9px 24px !important;
+    box-sizing: border-box;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-top: 8px;
+
+    background-color: transparent !important;
+    color: #fff !important;
+
+    /* Border & Font */
+    border: 2px solid rgb(255, 255, 255) !important;
+    font-family: "Proxima N W01 Bold", sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    line-height: 150% !important;
+    letter-spacing: 10% !important;
+    text-decoration: none !important;
+    -webkit-font-smoothing: antialiased;
+
+    text-align: center;
+    /* Animation */
+    transition: all 0.2s linear, background-position 0.2s ease-out !important;
+}
+
+#SurveyEngineBody .Skin #Buttons #NextButton:hover,
+#SurveyEngineBody .Skin #Buttons #NextButton:focus,
+.Skin #Buttons #PreviousButton:hover,
+.Skin #Buttons #PreviousButton:focus {
+    background-color: #fff !important;
+    color: rgb(0, 153, 166) !important; /* Initial Teal */
+}
+
+#SurveyEngineBody .Skin #Buttons #NextButton:focus,
+.Skin #Buttons #PreviousButton:focus {
+    outline: 2px solid white;
+    outline-offset: 4px;
+}
+
+.Skin .MC .ChoiceStructure .LabelWrapper {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.Skin .MC .ChoiceStructure .LabelWrapper label {
+    width: 100% !important;
+    padding: 20px 24px !important;
+    margin: 0 !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    cursor: pointer !important;
+    text-align: left !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+.LabelWrapper {
+    background-color: #00838F !important;
+}
+
+.Skin .MC .ChoiceStructure .q-checked + .LabelWrapper {
+    background-color: white !important;
+}
+
+.Skin label.MultipleAnswer > span,
+.Skin label.SingleAnswer > span {
+    font-family: "Proxima N W01 Bold", sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 18px !important;
+    line-height: 1.4 !important;
+    margin-left: 32px;
+
+    color: white;
+}
+
+.Skin label.MultipleAnswer > span::before,
+.Skin label.SingleAnswer > span::before {
+    border: 2px solid #fff !important;
+}
+
+.Skin label.MultipleAnswer.q-checked > span,
+.Skin label.SingleAnswer.q-checked > span {
+    color: #00838f !important;
+}
+
+.Skin label.MultipleAnswer.q-checked > span::before,
+.Skin label.SingleAnswer.q-checked > span::before {
+    border: 2px solid #3DA3AE !important;
+}
+
+.Skin label.SingleAnswer > span::before,
+.Skin label.MultipleAnswer > span::before {
+    height: 38px;
+    width: 38px;
+    border-radius: 38px;
+}
+
+.Skin .ProgressBarFill {
+    background-color: #48BFA2 !important;
+}
+
+.Skin label.MultipleAnswer > span::before, .Skin label.SingleAnswer > span::before {
+    transform: translateY(-50%) !important;
+    margin-top: 0 !important;
+    background-size: 60% !important;
+}
+
+.Skin label.MultipleAnswer > span, .Skin label.SingleAnswer > span {
+    margin-left: 40px !important;
+}
+
+.Skin label.MultipleAnswer.q-checked > span::before, .Skin label.SingleAnswer.q-checked > span::before {
+    background-size: 60% !important;
+}
+
+.Skin div#Logo img {
+    margin: 20px 0 20px 20px !important;
+}
+
+.Skin div#Logo {
+    margin: -20px -20px 0 -20px !important;
+    background-color: #fff !important;
+
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Migros.svg/1280px-Migros.svg.png) !important;
+    background-size: 15% !important;
+    background-repeat: no-repeat !important;
+    background-position: 98% center !important;
+}
+
+@media only screen and (max-width: 770px) {
+    .Skin div#Logo {
+        margin: -7px -7px 0 -7px !important;
+        background-color: #fff !important;
+
+        background-size: 20% !important;
+        background-position: 95% center !important;
+    }
+
+    .Skin div#Logo img {
+        margin: 7px 0 7px 7px !important;
+    }
+
+    .Skin .ValidationError {
+        margin-left: 13px !important;
+    }
+
+    .Skin .QuestionText {
+        align-items: left !important;
+    }
+
+    .Skin .QuestionText h3 {
+        text-align: left !important;
+    }
+}
+
+@media only screen and (min-width: 771px) {
+    .Skin #ProgressBar {
+        margin-top: -30px !important;
+        margin-bottom: 30px !important;
+    }
+
+    .Skin #HeaderContainer {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .Skin #Header {
+        padding: 0 !important;
+    }
+
+    .Skin .ValidationError {
+        margin-left: 27px !important;
+    }
+}
+
+.Skin .QuestionOuter {
+    padding: 0 !important;
+}
+
+.Skin .QuestionBody {
+    padding-bottom: 0 !important;
+}
+
+.Skin .ProgressBarContainer {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.Skin #ProgressBarFillContainer, .Skin .ProgressBarFill, .Skin .ProgressBarFillContainer {
+    border-radius: 0 !important;
+    height: 8px;
+}
+
+.Skin #PushStickyFooter {
+    height: 35px !important;
+}
+
+.Skin #Buttons {
+    padding: 20px 16px !important;
+}
+
+.Skin .ValidationError {
+    background-position-y: 5px !important;
+}
+
+canvas#risk_dashboard_canvas {
+    background-color: #F3F7F7 !important;
+    padding: 24px 22px !important;
+    height: 100% !important;
+    width: 100% !important;
+    margin-bottom: 24px !important;
+}
+
+.Skin .SystemEndOfSurvey {
+    padding-bottom: 60px !important;
+}
