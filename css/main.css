@@ -173,14 +173,13 @@ body::before {
 }
 
 .Skin .ValidationError {
+    text-align: center;
+    background-color: #fff;
     background-position-y: 5px !important;
+    margin: 0 !important;
 }
 
 @media (width < 769px) {
-
-    .Skin .ValidationError {
-        margin-left: 13px !important;
-    }
 
     .Skin .QuestionText {
         align-items: left !important;
@@ -188,13 +187,6 @@ body::before {
 
     .Skin .QuestionText h3 {
         text-align: left !important;
-    }
-}
-
-@media (width >= 769px) {
-
-    .Skin .ValidationError {
-        margin-left: 27px !important;
     }
 }
 
