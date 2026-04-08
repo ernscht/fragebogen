@@ -101,13 +101,13 @@ body::before {
 }
 
 .Skin .QuestionText,
-.Skin .QuestionText div {
-
+.Skin .QuestionText div,
+.Skin .QuestionOuter fieldset > legend,
+.Skin .QuestionOuter fieldset > legend label.QuestionText {
+    font-size: 16px !important;
+    font-family: "Proxima N W01 Bold", sans-serif !important;
 }
 
-
-.Skin .QuestionOuter fieldset > legend,
-.Skin .QuestionOuter fieldset > legend label.QuestionText,
 #risk-result-wrapper div,
 #EndOfSurvey {
     background-color: #fff !important;
