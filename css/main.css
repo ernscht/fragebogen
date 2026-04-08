@@ -1,9 +1,10 @@
 body::before {
     content: "CSS";
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
     background: #fee;
+    padding: 0.6em 1em;
     border: 1px dotted orange;
 }
 
@@ -14,28 +15,23 @@ body::before {
     display: none !important;
 }
 
-.XSkin #SkinContent {
-    width: 100% !important;
-    max-width: 100% !important;
-}
-
 .XSkin #SkinContent legend label {
     max-width: 770px !important;
 }
 
 
-/* header */
+/* start */
 .Skin #LogoContainer {
     background-color: #fff;
     margin: 0;
 }
 
 .Skin div#Logo img {
-    margin: 20px 0 20px 20px !important;
+    margin: 20px 0 0 20px !important;
 }
 
 .Skin div#Logo {
-    margin: -20px -20px 0 -20px !important;
+    margin: -20px 0 0 -20px !important;
     background-color: #fff !important;
 
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Migros.svg/1280px-Migros.svg.png) !important;
@@ -46,7 +42,7 @@ body::before {
 
 .Skin #ProgressBar {
     margin: 0 auto !important;
-    padding: 40px !important;
+    padding: 50px 0 40px !important;
 }
 
 .Skin .ProgressBarFill {
