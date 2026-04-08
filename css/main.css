@@ -9,6 +9,7 @@ body::before {
 
 /* layout */
 
+#HeaderContainer,
 .LanguageSelectorContainer {
     display: none !important;
 }
