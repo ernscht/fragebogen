@@ -27,7 +27,7 @@ body::before {
 /* header */
 .Skin #LogoContainer {
     background-color: #fff;
-    margin-bottom: 70px;
+    margin: 0;
 }
 
 .Skin div#Logo img {
@@ -45,8 +45,8 @@ body::before {
 }
 
 .Skin #ProgressBar {
-    margin: 0 !important;
-    padding: 30px !important;
+    margin: 0 auto !important;
+    padding: 40px !important;
 }
 
 .Skin .ProgressBarFill {
