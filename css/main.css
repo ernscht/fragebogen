@@ -13,12 +13,12 @@ body::before {
     display: none !important;
 }
 
-.Skin #SkinContent {
+.XSkin #SkinContent {
     width: 100% !important;
     max-width: 100% !important;
 }
 
-.Skin #SkinContent legend label {
+.XSkin #SkinContent legend label {
     max-width: 770px !important;
 }
 
@@ -26,6 +26,7 @@ body::before {
 /* header */
 .Skin #LogoContainer {
     background-color: #fff;
+    margin-bottom: 70px;
 }
 
 .Skin div#Logo img {
@@ -43,10 +44,10 @@ body::before {
 }
 
 .Skin .ProgressBarFill {
-    background-color: #48BFA2 !important;
+    background-color: #48bfa2 !important;
 }
 
-.Skin .ProgressBarContainer {
+.XSkin .ProgressBarContainer {
     width: 100% !important;
     margin: 0 !important;
 }
@@ -74,17 +75,17 @@ body::before {
 }
 
 @media (width >= 769px) {
-    .Skin #ProgressBar {
+    .XSkin #ProgressBar {
         margin-top: -30px !important;
         margin-bottom: 30px !important;
     }
 
-    .Skin #HeaderContainer {
+    .XSkin #HeaderContainer {
         padding: 0 !important;
         margin: 0 !important;
     }
 
-    .Skin #Header {
+    .XSkin #Header {
         padding: 0 !important;
     }
 
