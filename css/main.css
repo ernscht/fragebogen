@@ -1,13 +1,3 @@
-body::before {
-    content: "CSS";
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    background: #fee;
-    padding: 0.6em 1em;
-    border: 1px dotted orange;
-}
-
 /* layout */
 
 #HeaderContainer,
@@ -18,7 +8,6 @@ body::before {
 .XSkin #SkinContent legend label {
     max-width: 770px !important;
 }
-
 
 /* start */
 .Skin #LogoContainer {
