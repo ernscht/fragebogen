@@ -101,7 +101,11 @@ body::before {
 }
 
 .Skin .QuestionText,
-.Skin .QuestionText div,
+.Skin .QuestionText div {
+
+}
+
+
 .Skin .QuestionOuter fieldset > legend,
 .Skin .QuestionOuter fieldset > legend label.QuestionText,
 #risk-result-wrapper div,
