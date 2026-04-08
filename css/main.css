@@ -104,6 +104,7 @@ body::before {
 .Skin .QuestionText div,
 .Skin .QuestionOuter fieldset > legend,
 .Skin .QuestionOuter fieldset > legend label.QuestionText {
+    color: #fff;
     font-size: 16px !important;
     font-family: "Proxima N W01 Bold", sans-serif !important;
 }
