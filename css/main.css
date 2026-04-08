@@ -48,7 +48,7 @@ body::before {
     background-color: #48bfa2 !important;
 }
 
-.XSkin .ProgressBarContainer {
+.Skin .ProgressBarContainer {
     width: 100% !important;
     margin: 0 !important;
 }
@@ -79,11 +79,6 @@ body::before {
     .XSkin #ProgressBar {
         margin-top: -30px !important;
         margin-bottom: 30px !important;
-    }
-
-    .XSkin #HeaderContainer {
-        padding: 0 !important;
-        margin: 0 !important;
     }
 
     .XSkin #Header {
