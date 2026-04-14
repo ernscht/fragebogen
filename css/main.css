@@ -2,7 +2,13 @@
 
 :root {
     --impuls-content-padding: 16px;
-    --impuls-color-green-background: #3da3ae;
+
+    --impuls-color-green: #48bfa2;
+    --impuls-color-mid-turquoise: #00838f;
+    --impuls-color-turquoise: #0099a6;
+    --impuls-color-light-gray: #f3f7f7;
+
+    --impuls-color-old: #3da3ae;
 }
 
 #HeaderContainer,
@@ -36,7 +42,7 @@
 }
 
 .Skin .ProgressBarFill {
-    background-color: #48bfa2 !important;
+    background-color: var(--impuls-color-green) !important;
 }
 
 .Skin .ProgressBarContainer {
@@ -67,7 +73,8 @@
 }
 
 .Skin #SkinContent {
-    background-color: var(--impuls-color-green-background);
+    background-color: var(--impuls-color-turquoise);
+    border-radius: 0;
 }
 
 /* Questions */
@@ -81,7 +88,6 @@
 }
 
 .Skin .QuestionText {
-    padding-bottom: 0 !important;
     padding: var(--impuls-content-padding) !important;
     display: flex !important;
     justify-content: center !important;
@@ -145,7 +151,7 @@
     display: block !important;
     width: 170px !important;
     height: 80px !important;
-    background-color: #ffffff !important;
+    background-color: #fff !important;
     border: none !important;
     border-bottom: 4px solid #00838f !important;
     font-size: 50px !important;
@@ -199,7 +205,7 @@
 }
 
 .LabelWrapper {
-    background-color: #00838F !important;
+    background-color: var(--impuls-color-mid-turquoise) !important;
 }
 
 .Skin .MC .ChoiceStructure .q-checked + .LabelWrapper {
@@ -228,7 +234,7 @@
 
 .Skin label.SingleAnswer.q-checked > span::before,
 .Skin label.MultipleAnswer.q-checked > span::before {
-    border: 2px solid var(--impuls-color-green-background) !important;
+    border: 2px solid var(--impuls-color-turquoise) !important;
     background-size: 60% !important;
 }
 
@@ -300,7 +306,7 @@
 /* divers */
 
 canvas#risk_dashboard_canvas {
-    background-color: #F3F7F7 !important;
+    background-color: var(--impuls-color-light-gray) !important;
     padding: 24px 22px !important;
     height: 100% !important;
     width: 100% !important;

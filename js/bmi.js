@@ -108,7 +108,7 @@ Qualtrics.SurveyEngine.addOnReady(function() {
             ctx.beginPath();
             ctx.arc(centerX, centerY, outerR + 6, Math.PI, 0, false);
             ctx.lineWidth = 14;
-            ctx.strokeStyle = '#f2f2f2';
+            ctx.strokeStyle = '#ffffff';
             ctx.stroke();
         }
 
