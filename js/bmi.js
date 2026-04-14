@@ -114,6 +114,48 @@ Qualtrics.SurveyEngine.addOnReady(function() {
 
         drawTachometer();
 
+        // Calculate Needle Angle
+        // Math.PI is the start (left), we add (score * segmentWidth)
+        // + half a segment to point to the middle of the color block
+        var segmentWidth = Math.PI / 5;
+        var needleAngle = Math.PI + (clampedScore * segmentWidth) + (segmentWidth / 2);
+
+        // Draw the Needle (SVG-based)
+        ctx.save();
+        ctx.translate(centerX, centerY);
+        // SVG needle points "up" by default; rotate +90° to align with +X direction
+        ctx.rotate(needleAngle + Math.PI / 2);
+
+        // SVG reference: viewBox="0 0 62 106"
+        // Base center (pivot) is roughly at x=31, y=95. Tip at y=12.4.
+        var needleTipY = 12.4;
+        var needleBaseY = 95.0;
+        var needleBaseX = 31.0;
+        var needleBaseToTip = needleBaseY - needleTipY; // ~82.6
+
+        // Shorter than before: 65% of radius
+        var needleLength = radius * 0.65;
+        var needleScale = needleLength / needleBaseToTip;
+
+        ctx.scale(needleScale, needleScale);
+        // Move pivot inward by ~1/6 of needle length
+        var pivotInset = needleBaseToTip / 6;
+        ctx.translate(-needleBaseX, -(needleBaseY - pivotInset));
+
+        var needleOuter = new Path2D(
+            "M26.3,12.4c1.1-5.2,8.4-5.2,9.5,0,5.2,23.4,12.7,58.9,12.7,67.9,0,13.8-10.3,14.8-17.5,14.8s-17.5-3-17.5-14.8c0-7.8,7.6-44.1,12.8-67.9Z"
+        );
+        var needleInner = new Path2D(
+            "M45,80.3c0-2-.4-5.6-1.2-10.6-.8-4.9-1.9-10.9-3.1-17.3-2.5-12.9-5.7-27.6-8.3-39.2-.3-1.5-2.4-1.5-2.7,0-2.6,11.9-5.8,26.9-8.3,39.9-1.3,6.5-2.4,12.5-3.2,17.3-.8,4.9-1.2,8.4-1.2,10,0,4.7,1.9,7.3,4.5,8.9,2.7,1.7,6.4,2.4,9.5,2.4s7.1-.3,9.7-1.8c1.2-.7,2.2-1.7,3-3,.8-1.4,1.3-3.5,1.3-6.5ZM52,80.3c0,3.9-.7,7.1-2.1,9.8-1.4,2.7-3.4,4.6-5.7,5.8-4.4,2.5-9.6,2.7-13.2,2.7s-9.1-.8-13.3-3.5c-4.5-2.9-7.7-7.7-7.7-14.8,0-2.3.5-6.3,1.3-11.1.8-4.9,1.9-11,3.2-17.5,2.6-13.1,5.8-28.1,8.4-40,1.9-8.9,14.4-8.9,16.4,0,2.6,11.7,5.8,26.4,8.3,39.4,1.3,6.5,2.4,12.5,3.2,17.6.8,4.9,1.3,9.1,1.3,11.7Z"
+        );
+
+        ctx.fillStyle = "#0099a6";
+        ctx.fill(needleOuter);
+        ctx.fillStyle = "#ffffff";
+        ctx.fill(needleInner);
+
+        ctx.restore();
+
         // CUSTOM END
 
         /*
@@ -129,8 +171,6 @@ Qualtrics.SurveyEngine.addOnReady(function() {
           ctx.strokeStyle = riskConfig[i].color;
           ctx.stroke();
         });
-        */
-
 
         // Calculate Needle Angle
         // Math.PI is the start (left), we add (score * segmentWidth)
@@ -155,6 +195,9 @@ Qualtrics.SurveyEngine.addOnReady(function() {
         ctx.arc(0, 0, 8, 0, 2 * Math.PI);
         ctx.fill();
         ctx.restore();
+        */
+
+
 
         // 5) Update the Text Label below the Gauge
         var labelEl = document.getElementById("displayRiskLevelLabel");
