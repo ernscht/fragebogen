@@ -1,5 +1,10 @@
 /* layout */
 
+:root {
+    --impuls-content-padding: 16px;
+    --impuls-color-green-background: #3da3ae;
+}
+
 #HeaderContainer,
 .LanguageSelectorContainer {
     display: none !important;
@@ -27,7 +32,7 @@
 
 .Skin #ProgressBar {
     margin: 0 auto !important;
-    padding: 40px 0 46px !important;
+    padding: 40px var(--impuls-content-padding) 46px !important;
 }
 
 .Skin .ProgressBarFill {
@@ -61,6 +66,10 @@
 
 }
 
+.Skin #SkinContent {
+    background-color: var(--impuls-color-green-background);
+}
+
 /* Questions */
 
 .Skin .QuestionOuter {
@@ -73,7 +82,7 @@
 
 .Skin .QuestionText {
     padding-bottom: 0 !important;
-    padding: 16px !important;
+    padding: var(--impuls-content-padding) !important;
     display: flex !important;
     justify-content: center !important;
     flex-direction: column !important;
@@ -159,7 +168,6 @@
 }
 
 @media (width < 769px) {
-
     .Skin .QuestionText {
         align-items: left !important;
     }
@@ -220,7 +228,7 @@
 
 .Skin label.SingleAnswer.q-checked > span::before,
 .Skin label.MultipleAnswer.q-checked > span::before {
-    border: 2px solid #3da3ae !important;
+    border: 2px solid var(--impuls-color-green-background) !important;
     background-size: 60% !important;
 }
 
@@ -243,7 +251,7 @@
 /* buttons */
 
 .Skin #Buttons {
-    padding: 20px 16px !important;
+    padding: 20px var(--impuls-content-padding) !important;
 }
 
 #SurveyEngineBody .Skin #Buttons #NextButton,
