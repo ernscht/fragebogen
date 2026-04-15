@@ -73,7 +73,7 @@ Qualtrics.SurveyEngine.addOnReady(function() {
             return (deg * Math.PI) / 180;
         }
 
-        function drawRingSegment(centerX, centerY, outerR, innerR, startDeg, endDeg, color) {
+        function drawRingSegment(centerX, centerY, outerR, innerR, startDeg, endDeg, color, strokeColor) {
             const start = degToRad(startDeg);
             const end = degToRad(endDeg);
 
@@ -83,6 +83,12 @@ Qualtrics.SurveyEngine.addOnReady(function() {
             ctx.closePath();
             ctx.fillStyle = color;
             ctx.fill();
+
+            if (strokeColor) {
+                ctx.lineWidth = 6;
+                ctx.strokeStyle = '#ffffff';
+                ctx.stroke();
+            }
         }
 
         function drawTachometer() {
@@ -106,15 +112,15 @@ Qualtrics.SurveyEngine.addOnReady(function() {
                 return seg;
             });
 
-            // White backing ring behind the colored arc (8px on both sides)
-            var backingCapDeg = 3;
+            // White backing ring behind the colored arc (8px on all sides)
             drawRingSegment(
                 centerX,
                 centerY,
                 outerR + 8,
                 innerR - 8,
-                180 - backingCapDeg,
-                360 + backingCapDeg,
+                180,
+                360,
+                '#ffffff',
                 '#ffffff'
             );
 
