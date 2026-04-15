@@ -4,13 +4,13 @@ Qualtrics.SurveyEngine.addOnReady(function() {
      * Logic: RISK_SCORE (0, 1, 2, 3, 4) determines the needle position.
      ******************************************************************/
 
-        // 1) Pull the Risk Score from Embedded Data
+    // 1) Pull the Risk Score from Embedded Data
     var riskScore = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('RISK_SCORE'));
     // BMI anzeigen
     var bmiValue = Qualtrics.SurveyEngine.getEmbeddedData('BMI');
     var bmiClass = Qualtrics.SurveyEngine.getEmbeddedData('BMI_CLASSIFICATION');
 
-// Optional: Mapping für sprechende Klassifikation
+    // Optional: Mapping für sprechende Klassifikation
     var bmiClassLabels = {
         "NORMALWEIGHT": "Normalgewicht",
         "OVERWEIGHT": "Übergewicht",
@@ -30,7 +30,6 @@ Qualtrics.SurveyEngine.addOnReady(function() {
         bmiClassDisplay.innerText = "Dein BMI deutet auf " + label + " hin";
     }
 
-
     // Fallback if the variable is missing or NaN
     if (isNaN(riskScore)) { riskScore = 0; }
 
@@ -39,11 +38,11 @@ Qualtrics.SurveyEngine.addOnReady(function() {
 
     // 2) Configuration: Colors and Labels for the 5 levels
     var riskConfig = {
-        0: { label: "Kein Risiko", color: "#27ae60" },      // Green
-        1: { label: "Geringes Risiko", color: "#99cc33" },   // Light Green
-        2: { label: "Mittleres Risiko", color: "#f1c40f" },  // Yellow
-        3: { label: "Hohes Risiko", color: "#e67e22" },      // Orange
-        4: { label: "Sehr hohes Risiko", color: "#c0392b" }  // Red
+        0: { label: "Kein Risiko", color: "#00881d" },       // Green
+        1: { label: "Geringes Risiko", color: "#4aba4d" },   // Middle Green
+        2: { label: "Mittleres Risiko", color: "#85ca51" },  // Light Green
+        3: { label: "Hohes Risiko", color: "#fdb931" },      // Orange
+        4: { label: "Sehr hohes Risiko", color: "#fd5431" }  // Red
     };
 
     // 3) Show the corresponding Content Block
@@ -58,14 +57,16 @@ Qualtrics.SurveyEngine.addOnReady(function() {
     if (canvas && canvas.getContext) {
         var ctx = canvas.getContext("2d");
 
-        // Canvas dimensions
+        // Canvas dimensions (place gauge toward the top, leave bottom space)
         var centerX = canvas.width / 2;
-        var centerY = canvas.height - 30;
-        var radius = Math.min(centerX, centerY) - 20;
+        var topPadding = 20;
+        var bottomPadding = 40;
+        var availableHeight = canvas.height - topPadding - bottomPadding;
+        var radius = Math.min(canvas.width * 0.46, availableHeight) - 6;
+        var centerY = topPadding + radius;
 
         // Clear previous drawing
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-
 
         // CUSTOM START
         function degToRad(deg) {
@@ -88,8 +89,8 @@ Qualtrics.SurveyEngine.addOnReady(function() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
             const centerX = canvas.width / 2;
-            const centerY = canvas.height * 0.92;
-            const outerR = Math.min(canvas.width * 0.46, canvas.height * 0.85);
+            const centerY = topPadding + radius;
+            const outerR = radius;
             const innerR = outerR * 0.64;
 
             const gap = 3.5;
@@ -133,13 +134,13 @@ Qualtrics.SurveyEngine.addOnReady(function() {
         var needleBaseX = 31.0;
         var needleBaseToTip = needleBaseY - needleTipY; // ~82.6
 
-        // Shorter than before: 65% of radius
-        var needleLength = radius * 0.65;
+        // Shorter than before: 55% of radius
+        var needleLength = radius * 0.55;
         var needleScale = needleLength / needleBaseToTip;
 
         ctx.scale(needleScale, needleScale);
-        // Move pivot inward by ~1/6 of needle length
-        var pivotInset = needleBaseToTip / 6;
+        // Move pivot inward by ~1/5 of needle length
+        var pivotInset = needleBaseToTip / 5;
         ctx.translate(-needleBaseX, -(needleBaseY - pivotInset));
 
         var needleOuter = new Path2D(
@@ -157,47 +158,6 @@ Qualtrics.SurveyEngine.addOnReady(function() {
         ctx.restore();
 
         // CUSTOM END
-
-        /*
-        // Draw the 5 segments (0 to 4)
-        [0, 1, 2, 3, 4].forEach(function(i) {
-          // Each segment is 1/5th of the semi-circle (PI / 5)
-          var startAngle = Math.PI + (i * (Math.PI / 5));
-          var endAngle = Math.PI + ((i + 1) * (Math.PI / 5));
-
-          ctx.beginPath();
-          ctx.arc(centerX, centerY, radius, startAngle, endAngle, false);
-          ctx.lineWidth = 30;
-          ctx.strokeStyle = riskConfig[i].color;
-          ctx.stroke();
-        });
-
-        // Calculate Needle Angle
-        // Math.PI is the start (left), we add (score * segmentWidth)
-        // + half a segment to point to the middle of the color block
-        var segmentWidth = Math.PI / 5;
-        var needleAngle = Math.PI + (clampedScore * segmentWidth) + (segmentWidth / 2);
-
-        // Draw the Needle
-        ctx.save();
-        ctx.translate(centerX, centerY);
-        ctx.rotate(needleAngle);
-
-        ctx.beginPath();
-        ctx.moveTo(0, -6);          // Needle base width
-        ctx.lineTo(radius - 15, 0); // Needle length
-        ctx.lineTo(0, 6);
-        ctx.fillStyle = "#333333";
-        ctx.fill();
-
-        // Draw Center Pivot Point
-        ctx.beginPath();
-        ctx.arc(0, 0, 8, 0, 2 * Math.PI);
-        ctx.fill();
-        ctx.restore();
-        */
-
-
 
         // 5) Update the Text Label below the Gauge
         var labelEl = document.getElementById("displayRiskLevelLabel");
