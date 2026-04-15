@@ -94,23 +94,33 @@ Qualtrics.SurveyEngine.addOnReady(function() {
             const innerR = outerR * 0.64;
 
             const gap = 3.5;
-            const segments = [
-                { start: 180, end: 198, color: '#00961a' },
-                { start: 198 + gap, end: 213, color: '#50bb4a' },
-                { start: 213 + gap, end: 235, color: '#86c64e' },
-                { start: 235 + gap, end: 265, color: '#f4b533' },
-                { start: 265 + gap, end: 360, color: '#ff5730' }
-            ];
+            const colors = ['#00961a', '#50bb4a', '#86c64e', '#f4b533', '#ff5730'];
+            const totalSpan = 180;
+            const totalGap = gap * (colors.length - 1);
+            const segmentSpan = (totalSpan - totalGap) / colors.length;
+            let start = 180;
+            const segments = colors.map(color => {
+                const end = start + segmentSpan;
+                const seg = { start: start, end: end, color: color };
+                start = end + gap;
+                return seg;
+            });
+
+            // White backing ring behind the colored arc (8px on both sides)
+            var backingCapDeg = 3;
+            drawRingSegment(
+                centerX,
+                centerY,
+                outerR + 8,
+                innerR - 8,
+                180 - backingCapDeg,
+                360 + backingCapDeg,
+                '#ffffff'
+            );
 
             segments.forEach(seg => {
                 drawRingSegment(centerX, centerY, outerR, innerR, seg.start, seg.end, seg.color);
             });
-
-            ctx.beginPath();
-            ctx.arc(centerX, centerY, outerR + 6, Math.PI, 0, false);
-            ctx.lineWidth = 14;
-            ctx.strokeStyle = '#ffffff';
-            ctx.stroke();
         }
 
         drawTachometer();
