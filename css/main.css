@@ -87,8 +87,7 @@
     max-width: 770px !important;
 }
 
-/*@media (width >= 770px) {}*/
-
+.Skin .SkinInner { position: relative; }
 .Skin .SkinInner::before {
     content: '';
     display: block;
