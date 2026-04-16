@@ -45,14 +45,13 @@
     background-color: var(--impuls-color-green-background);
 }
 
-.Skin .ProgressBarFill {
-    background-color: var(--impuls-color-green) !important;
+.Skin #ProgressBar > div {
+    padding-inline: var(--impuls-content-padding);
 }
 
 .Skin .ProgressBarContainer {
     width: 100% !important;
     margin: 0 !important;
-    padding-inline: var(--impuls-content-padding);
 }
 
 .Skin #ProgressBarFillContainer,
@@ -60,6 +59,10 @@
 .Skin .ProgressBarFillContainer {
     border-radius: 0 !important;
     height: 8px;
+}
+
+.Skin .ProgressBarFill {
+    background-color: var(--impuls-color-green) !important;
 }
 
 @media (width < 769px) {
