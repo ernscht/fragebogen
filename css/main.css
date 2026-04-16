@@ -38,6 +38,8 @@
 }
 
 .Skin #ProgressBar {
+    width: 100%;
+    max-width: none !important;
     margin: 0 auto !important;
     padding: 40px 0 46px !important;
     background-color: var(--impuls-color-green-background);
