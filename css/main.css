@@ -96,7 +96,7 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 800px;
+    height: 860px;
     background: url(https://impuls.migros.ch/.resources/terrific/assets/img/components/corpus/workaround~9810-24-99-99-89-91-024~cache.svg);
 }
 
@@ -105,7 +105,7 @@
     display: block;
     position: absolute;
     z-index: -1;
-    top: 800px;
+    top: 860px;
     left: 0;
     right: 0;
     height: 130px;
