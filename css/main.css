@@ -9,7 +9,6 @@
 
     --impuls-color-green-background: var(--impuls-color-turquoise);
 
-
     --impuls-color-old: #3da3ae;
 }
 
@@ -40,7 +39,7 @@
 
 .Skin #ProgressBar {
     margin: 0 auto !important;
-    padding: 40px var(--impuls-content-padding) 46px !important;
+    padding: 40px 0 46px !important;
     background-color: var(--impuls-color-green-background);
 }
 
@@ -51,6 +50,7 @@
 .Skin .ProgressBarContainer {
     width: 100% !important;
     margin: 0 !important;
+    padding-inline: var(--impuls-content-padding);
 }
 
 .Skin #ProgressBarFillContainer,
