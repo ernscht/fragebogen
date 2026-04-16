@@ -39,7 +39,7 @@
 
 .Skin #ProgressBar {
     width: 100%;
-    max-width: none !important;
+    max-width: 770px;
     margin: 0 auto !important;
     padding: 40px 0 46px !important;
     background-color: var(--impuls-color-green-background);
@@ -65,7 +65,7 @@
     background-color: var(--impuls-color-green) !important;
 }
 
-@media (width < 769px) {
+@media (width < 770px) {
     .Skin div#Logo {
         margin: -7px -7px 0 -7px !important;
         background-color: #fff !important;
@@ -83,6 +83,11 @@
 .Skin #SkinContent {
     background-color: var(--impuls-color-green-background);
     border-radius: 0;
+    max-width: 770px !important;
+}
+
+@media (width >= 770px) {
+
 }
 
 /* Questions */
@@ -152,7 +157,7 @@
 .Skin .QuestionBody {
     margin-block: 12px !important;
     margin-inline: auto !important;
-    max-width: 770px !important;
+    /*max-width: 770px !important;*/
 }
 
 .Skin .QuestionBody .ChoiceStructure .InputText,
@@ -182,7 +187,7 @@
     margin: 0 !important;
 }
 
-@media (width < 769px) {
+@media (width < 770px) {
     .Skin .QuestionText {
         align-items: left !important;
     }
