@@ -96,8 +96,21 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 600px;
+    height: 900px;
     background-color: var(--impuls-color-teal);
+}
+
+Skin .SkinInner::after {
+    position: absolute;
+    z-index: -1;
+    top: 900px;
+    left: 0;
+    right: 0;
+    height: 100px;
+
+    background-image: url(https://impuls.migros.ch/.resources/terrific/assets/img/components/exam/spickel_bottom~5398-54-98-53-50-97-485~cache.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 /* Questions */
