@@ -100,7 +100,7 @@
     background-color: var(--impuls-color-teal);
 }
 
-Skin .SkinInner::after {
+.Skin .SkinInner::after {
     position: absolute;
     z-index: -1;
     top: 900px;
@@ -211,10 +211,6 @@ Skin .SkinInner::after {
 }
 
 @media (width < 770px) {
-    .Skin .QuestionText {
-        align-items: left !important;
-    }
-
     .Skin .QuestionText h3 {
         text-align: left !important;
     }
