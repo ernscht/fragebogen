@@ -89,7 +89,7 @@
 
 /*@media (width >= 770px) {}*/
 
-.Skin #SkinInner::before {
+.Skin .SkinInner::before {
     content: '';
     display: block;
     position: absolute;
