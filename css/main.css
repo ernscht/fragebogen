@@ -5,6 +5,7 @@
     --impuls-color-green: #48bfa2;
     --impuls-color-mid-turquoise: #00838f;
     --impuls-color-turquoise: #0099a6;
+    --impuls-color-teal: #5ea2ad;
     --impuls-color-light-gray: #f3f7f7;
 
     --impuls-color-green-background: var(--impuls-color-turquoise);
@@ -86,8 +87,17 @@
     max-width: 770px !important;
 }
 
-@media (width >= 770px) {
+/*@media (width >= 770px) {}*/
 
+.Skin #SkinContent::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 600px;
+    background-color: var(--impuls-color-teal);
 }
 
 /* Questions */
