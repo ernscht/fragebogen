@@ -101,9 +101,11 @@
 }
 
 .Skin .SkinInner::after {
+    content: '';
+    display: block;
     position: absolute;
     z-index: -1;
-    top: 900px;
+    top: 899px;
     left: 0;
     right: 0;
     height: 100px;
