@@ -89,7 +89,7 @@
 
 /*@media (width >= 770px) {}*/
 
-.Skin #SkinContent::before {
+.Skin #SkinInner::before {
     content: '';
     display: block;
     position: absolute;
@@ -98,6 +98,7 @@
     right: 0;
     height: 600px;
     background-color: var(--impuls-color-teal);
+    background-position: 20px 200px
 }
 
 /* Questions */
