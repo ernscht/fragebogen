@@ -92,12 +92,12 @@
     content: '';
     display: block;
     position: absolute;
+    z-index: -1;
     top: 0;
     left: 0;
     right: 0;
     height: 600px;
     background-color: var(--impuls-color-teal);
-    background-position: 20px 200px
 }
 
 /* Questions */
