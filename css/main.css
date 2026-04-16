@@ -97,7 +97,7 @@
     left: 0;
     right: 0;
     height: 800px;
-    background-color: var(--impuls-color-teal);
+    background: url(https://impuls.migros.ch/.resources/terrific/assets/img/components/corpus/workaround~9810-24-99-99-89-91-024~cache.svg);
 }
 
 .Skin .SkinInner::after {
@@ -113,6 +113,13 @@
     background-image: url(https://impuls.migros.ch/.resources/terrific/assets/img/components/exam/spickel_bottom~5398-54-98-53-50-97-485~cache.svg);
     background-repeat: no-repeat;
     background-size: 100% 130px;
+}
+
+@media (width < 770px) {
+    .Skin .SkinInner::after {
+        height: 90px;
+        background-size: 100% 90px;
+    }
 }
 
 /* Questions */
