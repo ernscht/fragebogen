@@ -2,11 +2,13 @@
 
 :root {
     --impuls-content-padding: 16px;
-
     --impuls-color-green: #48bfa2;
     --impuls-color-mid-turquoise: #00838f;
     --impuls-color-turquoise: #0099a6;
     --impuls-color-light-gray: #f3f7f7;
+
+    --impuls-color-green-background: var(--impuls-color-turquoise);
+
 
     --impuls-color-old: #3da3ae;
 }
@@ -39,6 +41,7 @@
 .Skin #ProgressBar {
     margin: 0 auto !important;
     padding: 40px var(--impuls-content-padding) 46px !important;
+    background-color: var(--impuls-color-green-background);
 }
 
 .Skin .ProgressBarFill {
@@ -73,7 +76,7 @@
 }
 
 .Skin #SkinContent {
-    background-color: var(--impuls-color-turquoise);
+    background-color: var(--impuls-color-green-background);
     border-radius: 0;
 }
 
@@ -96,6 +99,7 @@
 
 .Skin .QuestionText,
 .Skin .QuestionText div,
+.Skin .QuestionText a,
 .Skin .QuestionOuter fieldset > legend,
 .Skin .QuestionOuter fieldset > legend label.QuestionText,
 #EndOfSurvey {
