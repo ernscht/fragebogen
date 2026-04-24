@@ -26,20 +26,16 @@
 .Skin #LogoContainer {
     background-color: #fff;
     margin: 0;
-    padding: 0;
+    padding: 0 min(4vw, 24px) min(1vw, 12px) min(1vw, 12px);
 }
 
 .Skin #Logo {
     margin: 0;
     background-color: #fff;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIxNDYiIGhlaWdodD0iMjciIHZpZXdCb3g9IjAgMCAxMDggMjAiPjxwYXRoIGZpbGw9IiNGNjAiIGQ9Ik0xNy4wNzMgMTkuNVY4LjUzTDEyLjM2OCAxOS41SDkuNzU2TDUuMTMgOC41M1YxOS41SC4yNjhWLjQ5OWg2LjUwOGw0LjQ3MSAxMC43MjlMMTUuOTI1LjQ5OWg2LjAxVjE5LjV6bTguNjAxIDBWLjQ5OWg0LjE1NmMuMzY2IDAgLjcyOC4zNjYuNzI4Ljc2VjE5LjV6TTQ0LjA0NyA4LjU2aDYuMTc1Yy40ODggMCAuNzY2LjM5OC43NjYuODY1djkuODE3Yy0xLjczOS4zODctNC40NTMuNjI1LTYuNDczLjYyNS03LjA4NSAwLTEwLjgyLTMuMzc1LTEwLjgyLTkuODk0IDAtNS44MTMgMy43MzUtOS44NCA5Ljk2My05Ljg0IDIuNzQxIDAgNS4xNDYuNzMyIDYuNjkzIDEuNzc3bC0xLjkxNCAzLjI2OUM0Ny4xIDQuNTggNDUuMjk1IDQuMTYgNDQuMDIxIDQuMTZjLTMuNTggMC01LjI1MyAyLjM3Ni01LjI1MyA1LjgxMyAwIDMuNjc1IDEuOTM3IDUuOTQyIDUuNTEyIDUuOTQyLjY1NiAwIDEuNDY5LS4wMjUgMi4xMTktLjEyNXYtMy4zNWgtMi4zNTJ6TTY1LjQyNiAxOS41bC0yLjI1NC01LjIzYy0uNDYxLTEuMDY0LS43ODItMS41OTQtMS43Ni0xLjU5NGgtMS45NzZWMTkuNWgtNC43NzVWMS4yNTljMC0uMzk0LjQzMy0uNzYuNzQzLS43Nmg2Ljc0M2MzLjY2MiAwIDYuODAyLjc2IDYuODAyIDUuNDkyIDAgMi4xMTctMS4xNzMgNC4yODYtMy4zNyA0LjcyNSAxLjA5NS4zNzIgMi4xOTcgMS43NzggMi43OTYgMy4zbDIuMTcyIDUuNDg0em0tMy42LTE1LjM0aC0yLjM5djQuNzY1aDIuMzljMS40MjggMCAyLjU1MS0uNzYyIDIuNTUxLTIuNTY3IDAtMS44MzMtMS4xMjMtMi4xOTgtMi41NTEtMi4xOThtMTkuMjc4IDE1LjcwN2MtNi4yMjIgMC05LjUxMy00LjM5NS05LjUxMy05Ljg5NCAwLTUuNDQ4IDMuMjkxLTkuODQgOS41MTMtOS44NCA1LjgyNiAwIDkuMTIxIDQuMzkyIDkuMTIxIDkuODQgMCA1LjUtMy4yOTUgOS44OTQtOS4xMjEgOS44OTRtMC0xNS43MDdjLTIuNTYzIDAtNC4zODcgMS44MzEtNC4zODcgNS44MTMgMCA0LjA0MiAxLjgyMyA1Ljg2NiA0LjM4NyA1Ljg2NiAyLjE5NyAwIDMuOTk2LTEuODI0IDMuOTk2LTUuODY2IDAtMy45ODItMS43OTktNS44MTMtMy45OTYtNS44MTNNOTkuNTggMTkuODY3Yy0zLjIxMSAwLTYuMTk1LTEuMTUyLTcuNTI1LTIuMDY2bDIuMTY1LTMuODRjMS4yMDguNzMgMy41NTggMS44NTUgNS43MjYgMS44NTUgMS4yMjcgMCAyLjc3Ni0uMjM4IDIuNzc2LTEuNiAwLTEuMjc5LTEuNzMxLTEuNjcyLTQuMDAzLTIuMzItMi43NDItLjc4Ny01LjkzNC0xLjg3OC01LjkzNC01LjU2NiAwLTMuOTc1IDMuNTMxLTYuMTk3IDguMTI3LTYuMTk3IDMuMDM0IDAgNS4zODUgMS4wNzQgNi41ODUgMi4yMjJsLTIuNjM3IDMuMDAzYy0xLjMwNi0uNzc4LTIuNjM4LTEuMzg2LTQuMTMzLTEuMzg2LTEuODAxIDAtMi44MTkuNjg0LTIuODE5IDEuNjc4IDAgLjk4NiAxLjMwNyAxLjQ4OSAyLjk1MSAxLjk4MyAyLjkwNi44OTYgNi44NzMgMS44MTMgNi44NzMgNS42MiAwIDMuOTIxLTMuMTMzIDYuNjE0LTguMTUyIDYuNjE0Ii8+PC9zdmc+);
-    background-size: 15%;
+    background-size: min(25%, 140px);
     background-repeat: no-repeat;
-    background-position: 98% center;
-}
-
-.XSkin #Logo img {
-    margin: 20px;
+    background-position: right center;
 }
 
 .Skin #ProgressBar {
@@ -68,21 +64,6 @@
 
 .Skin .ProgressBarFill {
     background-color: var(--impuls-color-green) !important;
-}
-
-@media (width < 770px) {
-    .Skin div#Logo {
-        margin: -7px -7px 0 -7px !important;
-        background-color: #fff !important;
-
-        background-size: 20% !important;
-        background-position: 95% center !important;
-    }
-
-    .Skin div#Logo img {
-        margin: 7px 0 7px 7px !important;
-    }
-
 }
 
 .Skin #SkinContent {
