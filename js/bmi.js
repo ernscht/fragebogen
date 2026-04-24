@@ -59,7 +59,7 @@ Qualtrics.SurveyEngine.addOnReady(function() {
 
         // Canvas dimensions (place gauge toward the top, leave bottom space)
         var centerX = canvas.width / 2;
-        var topPadding = 20;
+        var topPadding = 80;
         var bottomPadding = 40;
         var availableHeight = canvas.height - topPadding - bottomPadding;
         var radius = Math.min(canvas.width * 0.46, availableHeight) - 6;
@@ -116,8 +116,8 @@ Qualtrics.SurveyEngine.addOnReady(function() {
             drawRingSegment(
                 centerX,
                 centerY,
-                outerR + 8,
-                innerR - 8,
+                outerR + 24,
+                innerR - 24,
                 180,
                 360,
                 '#ffffff',
