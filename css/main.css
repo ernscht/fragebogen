@@ -358,3 +358,42 @@ canvas#risk_dashboard_canvas {
 .Skin .SystemEndOfSurvey {
     padding-bottom: 60px !important;
 }
+
+/* details / accordion */
+
+.details-light {
+    border-top: 1px dashed #fff;
+    border-bottom: 1px dashed #fff;
+    padding: 20px 0;
+}
+
+.details-light summary {
+    list-style: none; /* Firefox */
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    font-size: 18px;
+}
+
+.details-light summary::-webkit-details-marker {
+    display: none; /* Chrome, Safari */
+}
+
+.details-light summary::before {
+    content: "❯";
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    transition: transform 0.3s ease;
+}
+
+.details-light[open] summary::before {
+    transform: rotate(90deg);
+}
+
+.details-light p {
+    padding-left: 25px;
+    padding-top: 5px;
+    font-size: 14px;
+}
