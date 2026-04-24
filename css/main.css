@@ -82,7 +82,7 @@
     left: 0;
     right: 0;
     height: 860px;
-    background: url(https://impuls.migros.ch/.resources/terrific/assets/img/components/corpus/workaround~9810-24-99-99-89-91-024~cache.svg);
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PGcgZmlsbD0iIzAwOTlBNiIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMCAwaDIwdjIwSDB6IiBvcGFjaXR5PSIuNiIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOm11bHRpcGx5Ii8+PHBhdGggZD0iTTAgMGgyMHYyMEgweiIgb3BhY2l0eT0iLjQiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTptdWx0aXBseSIvPjwvZz48L3N2Zz4=);
 }
 
 .Skin .SkinInner::after {
@@ -95,7 +95,7 @@
     right: 0;
     height: 130px;
 
-    background-image: url(https://impuls.migros.ch/.resources/terrific/assets/img/components/exam/spickel_bottom~5398-54-98-53-50-97-485~cache.svg);
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAyNCIgaGVpZ2h0PSIxMzciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxnIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTpub3JtYWwiIGZpbGw9IiMwMDk5QTYiPjx1c2UgeGxpbms6aHJlZj0iI2EiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTptdWx0aXBseSIgb3BhY2l0eT0iLjYiLz48dXNlIHhsaW5rOmhyZWY9IiNiIiB0cmFuc2Zvcm09Im1hdHJpeCgtMSAwIDAgMSAxMDI0IDApIiBzdHlsZT0ibWl4LWJsZW5kLW1vZGU6bXVsdGlwbHkiIG9wYWNpdHk9Ii40Ii8+PC9nPjxkZWZzPjxwYXRoIGlkPSJhIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDB2MjMuNzg4TDEwMjQgMTM3VjBIMHoiLz48cGF0aCBpZD0iYiIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMCAwdjQuNDhsMTAyNCA5OC42ODlWMEgweiIvPjwvZGVmcz48L3N2Zz4=);
     background-repeat: no-repeat;
     background-size: 100% 130px;
 }
