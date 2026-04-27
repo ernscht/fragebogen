@@ -59,9 +59,11 @@
 }
 
 @media (width >= 770px) {
-    border-width: 0 106px 222px;
-    top: -50px;
-    left: -50px;
+    .Skin #Logo::before {
+        border-width: 0 106px 222px;
+        top: -50px;
+        left: -50px;
+    }
 }
 
 .Skin #Logo img {
