@@ -58,7 +58,7 @@
     opacity: 0.8;
 }
 
-@media (width >= 770px) {
+@media (width > 480px) {
     .Skin #Logo::before {
         border-width: 0 106px 222px;
         top: -50px;
