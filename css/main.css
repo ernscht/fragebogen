@@ -510,7 +510,7 @@ details[open] summary::before {
 }
 
 .Skin .details-box .details-box__content a {
-    color: var(--impuls-color-turquoise);
+    color: var(--impuls-color-turquoise) !important;
     text-decoration: underline;
 }
 
