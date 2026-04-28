@@ -542,5 +542,7 @@ details[open] summary::before {
 
 .details-more p {
     padding: 0;
-    margin: 16px 8px 32px;
+    margin: 16px 0 32px;
+    padding: 0 16px;
+    border-left: 1px dashed #fff;
 }
