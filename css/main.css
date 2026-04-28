@@ -447,6 +447,12 @@ details[open] summary::before {
     display: flex;
     align-items: center;
     padding: 16px;
+    outline: none;
+    border: none;
+}
+
+.details-box summary:focus-visible {
+    outline: 1px solid #fff;
 }
 
 .details-box__number {
@@ -466,16 +472,16 @@ details[open] summary::before {
     font-size: 18px;
 }
 
-@media (width < 770px) {
-    .details-box__title {
-        display: inline-block;
-        max-width: 200px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        vertical-align: middle;
-    }
-}
+/*@media (width < 770px) {*/
+/*    .details-box__title {*/
+/*        display: inline-block;*/
+/*        max-width: 200px;*/
+/*        white-space: nowrap;*/
+/*        overflow: hidden;*/
+/*        text-overflow: ellipsis;*/
+/*        vertical-align: middle;*/
+/*    }*/
+/*}*/
 
 .details-box summary::before {
     right: 24px;
