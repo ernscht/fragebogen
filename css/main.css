@@ -162,8 +162,13 @@
     transition: text-decoration-color 0.3s ease;
 }
 
-.Skin .QuestionText a:hover {
+.Skin .QuestionText a:hover,
+.Skin .QuestionText a:focus-visible {
     text-decoration-color: var(--impuls-color-green);
+}
+
+.Skin .QuestionText a:focus {
+    outline: none;
 }
 
 .Skin .QuestionText,
@@ -505,8 +510,13 @@ details[open] summary::before {
 }
 
 .Skin .details-box .details-box__content a {
-    color: var(--impuls-color-turquoise) !important;
+    color: var(--impuls-color-turquoise);
     text-decoration: underline;
+}
+
+.Skin .details-box .details-box__content a:hover,
+.Skin .details-box .details-box__content a:focus-visible {
+    text-decoration-color: var(--impuls-color-dark-gray-font);
 }
 
 .details-box hr {
