@@ -8,7 +8,7 @@
     --impuls-color-turquoise-dark: #007884;
     --impuls-color-teal: #5ea2ad;
     --impuls-color-light-gray: #f3f7f7;
-    --impuls-color-gray: #DFE0E0;
+    --impuls-color-gray: #dfe0e0;
     --impuls-color-dark-gray: #484952;
 
     --impuls-color-green-background: var(--impuls-color-turquoise);
@@ -154,6 +154,16 @@
     display: flex !important;
     justify-content: center !important;
     flex-direction: column !important;
+}
+
+.Skin .QuestionText a {
+    /*text-decoration-color: var(--impuls-color-light-gray);*/
+    text-underline-offset: 0.2em;
+    transition: text-decoration-color 0.3s ease;
+}
+
+.Skin .QuestionText a:hover {
+    text-decoration-color: var(--impuls-color-green);
 }
 
 .Skin .QuestionText,
