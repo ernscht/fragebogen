@@ -2,6 +2,8 @@
 
 :root {
     --impuls-content-padding: 16px;
+    --impuls-content-max-width: 800px;
+
     --impuls-color-green: #48bfa2;
     --impuls-color-mid-turquoise: #00838f;
     --impuls-color-turquoise: #0099a6;
@@ -11,13 +13,15 @@
     --impuls-color-gray: #dfe0e0;
     --impuls-color-dark-gray: #484952;
 
-    --impuls-color-green-background: var(--impuls-color-turquoise);
+    --impuls-color-green-background: var(--impuls-color-turquoise-dark);
     --impuls-color-dark-gray-font: var(--impuls-color-dark-gray);
 
     --impuls-color-old: #3da3ae;
+    --impuls-color-gradient-right: #00afbf;
 }
 
 #HeaderContainer,
+#ProgressBar,
 .LanguageSelectorContainer {
     display: none !important;
 }
@@ -70,38 +74,17 @@
     position: relative;
 }
 
-.Skin #ProgressBar {
-    width: 100%;
-    max-width: 770px;
-    margin: 0 auto !important;
-    padding: 40px 0 46px !important;
+#HeaderContainer {
+    height: 100px;
     background-color: var(--impuls-color-green-background);
-}
-
-.Skin #ProgressBar > div {
-    padding-inline: var(--impuls-content-padding);
-}
-
-.Skin .ProgressBarContainer {
-    width: 100% !important;
-    margin: 0 !important;
-}
-
-.Skin #ProgressBarFillContainer,
-.Skin .ProgressBarFill,
-.Skin .ProgressBarFillContainer {
-    border-radius: 0 !important;
-    height: 8px;
-}
-
-.Skin .ProgressBarFill {
-    background-color: var(--impuls-color-green) !important;
+    background: linear-gradient(90deg, var(--impuls-color-turquois) 0%, #00afbf 100%);
+    max-width: var(--impuls-content-max-width);
 }
 
 .Skin #SkinContent {
     background-color: var(--impuls-color-green-background);
     border-radius: 0;
-    max-width: 770px !important;
+    max-width: var(--impuls-content-max-width) !important;
 }
 
 .Skin .SkinInner { position: relative; }
@@ -439,7 +422,7 @@ details[open] summary::before {
 /* details-box */
 
 .details-box {
-    background-color: var(--impuls-color-turquoise-dark);
+    background-color: var(--impuls-color-turquoise);
     border: none;
     border-radius: 2px;
 }
@@ -478,7 +461,7 @@ details[open] summary::before {
 }
 
 .details-box__wrap {
-    background-color: #F3F7F7;
+    background-color: var(--impuls-color-light-gray);
     padding: 16px 0;
 }
 
