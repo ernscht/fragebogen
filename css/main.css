@@ -20,7 +20,6 @@
     --impuls-color-gradient-right: #00afbf;
 }
 
-#HeaderContainer,
 #ProgressBar,
 .LanguageSelectorContainer {
     display: none !important;
@@ -74,10 +73,12 @@
     position: relative;
 }
 
-#HeaderContainer {
-    height: 100px;
+.Skin #HeaderContainer {
+    height: 160px;
+    padding: 0;
     background-color: var(--impuls-color-green-background);
-    background: linear-gradient(90deg, var(--impuls-color-turquois) 0%, #00afbf 100%);
+    background: linear-gradient(90deg, var(--impuls-color-turquoise) 0%, #00afbf 100%);
+    width: 100% !important;
     max-width: var(--impuls-content-max-width);
 }
 
@@ -140,7 +141,6 @@
 }
 
 .Skin .QuestionText a {
-    /*text-decoration-color: var(--impuls-color-light-gray);*/
     text-underline-offset: 0.2em;
     transition: text-decoration-color 0.3s ease;
 }
@@ -204,7 +204,6 @@
 .Skin .QuestionBody {
     margin-block: 12px !important;
     margin-inline: auto !important;
-    /*max-width: 770px !important;*/
 }
 
 .Skin .QuestionBody .ChoiceStructure .InputText,
