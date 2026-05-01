@@ -1,24 +1,95 @@
-Qualtrics.SurveyEngine.addOnReady(function() {
+Qualtrics.SurveyEngine.addOnReady(function () {
     /******************************************************************
-     * iMpuls Result-Page – Visual Risk Dashboard
-     * Logic: RISK_SCORE (0, 1, 2, 3, 4) determines the needle position.
+     * iMpuls Result-Page – Visual Risk Dashboard (multilingual)
+     * Language detection via browser language (default / fallback: German)
      ******************************************************************/
 
-    // 1) Pull the Risk Score from Embedded Data
-    var riskScore = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('RISK_SCORE'));
-    // BMI anzeigen
-    var bmiValue = Qualtrics.SurveyEngine.getEmbeddedData('BMI');
-    var bmiClass = Qualtrics.SurveyEngine.getEmbeddedData('BMI_CLASSIFICATION');
+    /* ================================================================
+       1) Detect browser language
+       ================================================================ */
+    var lang = (navigator.language || navigator.userLanguage || "de").toLowerCase();
+    if (lang.indexOf("fr") === 0) {
+        lang = "fr";
+    } else if (lang.indexOf("it") === 0) {
+        lang = "it";
+    } else {
+        lang = "de";
+    }
 
-    // Optional: Mapping für sprechende Klassifikation
-    var bmiClassLabels = {
-        "NORMALWEIGHT": "Normalgewicht",
-        "OVERWEIGHT": "Übergewicht",
-        "ADIPOSITAS_1": "Adipositas Grad I",
-        "ADIPOSITAS_2": "Adipositas Grad II",
-        "ADIPOSITAS_3": "Adipositas Grad III",
+    /* ================================================================
+       2) Translation dictionary
+       ================================================================ */
+    var i18n = {
+        de: {
+            riskLabels: {
+                0: "Kein Risiko",
+                1: "Geringes Risiko",
+                2: "Mittleres Risiko",
+                3: "Hohes Risiko",
+                4: "Sehr hohes Risiko"
+            },
+            bmiPrefix: "Dein BMI deutet auf ",
+            bmiClasses: {
+                "NORMALWEIGHT": "Normalgewicht",
+                "OVERWEIGHT": "Übergewicht",
+                "ADIPOSITAS_1": "Adipositas Grad I",
+                "ADIPOSITAS_2": "Adipositas Grad II",
+                "ADIPOSITAS_3": "Adipositas Grad III"
+            }
+        },
+
+        fr: {
+            riskLabels: {
+                0: "Aucun risque",
+                1: "Risque faible",
+                2: "Risque modéré",
+                3: "Risque élevé",
+                4: "Risque très élevé"
+            },
+            bmiPrefix: "Votre IMC indique ",
+            bmiClasses: {
+                "NORMALWEIGHT": "poids normal",
+                "OVERWEIGHT": "surpoids",
+                "ADIPOSITAS_1": "obésité de degré I",
+                "ADIPOSITAS_2": "obésité de degré II",
+                "ADIPOSITAS_3": "obésité de degré III"
+            }
+        },
+
+        it: {
+            riskLabels: {
+                0: "Nessun rischio",
+                1: "Rischio basso",
+                2: "Rischio medio",
+                3: "Rischio alto",
+                4: "Rischio molto alto"
+            },
+            bmiPrefix: "Il tuo BMI indica ",
+            bmiClasses: {
+                "NORMALWEIGHT": "peso normale",
+                "OVERWEIGHT": "sovrappeso",
+                "ADIPOSITAS_1": "obesità di grado I",
+                "ADIPOSITAS_2": "obesità di grado II",
+                "ADIPOSITAS_3": "obesità di grado III"
+            }
+        }
     };
 
+    var t = i18n[lang];
+
+    /* ================================================================
+       3) Get Embedded Data
+       ================================================================ */
+    var riskScore = parseInt(Qualtrics.SurveyEngine.getEmbeddedData("RISK_SCORE"));
+    if (isNaN(riskScore)) { riskScore = 0; }
+    var clampedScore = Math.max(0, Math.min(4, riskScore));
+
+    var bmiValue = Qualtrics.SurveyEngine.getEmbeddedData("BMI");
+    var bmiClass = Qualtrics.SurveyEngine.getEmbeddedData("BMI_CLASSIFICATION");
+
+    /* ================================================================
+       4) Display BMI information
+       ================================================================ */
     var bmiDisplay = document.getElementById("displayBMIValue");
     if (bmiDisplay && bmiValue) {
         bmiDisplay.innerText = bmiValue;
@@ -26,33 +97,34 @@ Qualtrics.SurveyEngine.addOnReady(function() {
 
     var bmiClassDisplay = document.getElementById("displayBMIClass");
     if (bmiClassDisplay && bmiClass) {
-        var label = bmiClassLabels[bmiClass] || bmiClass;
-        bmiClassDisplay.innerText = "Dein BMI deutet auf " + label + " hin";
+        var bmiLabel = t.bmiClasses[bmiClass] || bmiClass;
+        bmiClassDisplay.innerText = t.bmiPrefix + bmiLabel;
     }
 
-    // Fallback if the variable is missing or NaN
-    if (isNaN(riskScore)) { riskScore = 0; }
-
-    // Ensure score stays within 0-4 range
-    var clampedScore = Math.max(0, Math.min(4, riskScore));
-
-    // 2) Configuration: Colors and Labels for the 5 levels
+    /* ================================================================
+       5) Risk configuration (colors stay language-independent)
+       ================================================================ */
     var riskConfig = {
-        0: { label: "Kein Risiko", color: "#00881d" },       // Green
-        1: { label: "Geringes Risiko", color: "#4aba4d" },   // Middle Green
-        2: { label: "Mittleres Risiko", color: "#85ca51" },  // Light Green
-        3: { label: "Hohes Risiko", color: "#fdb931" },      // Orange
-        4: { label: "Sehr hohes Risiko", color: "#fd5431" }  // Red
+        0: { label: t.riskLabels[0], color: "#00881d" }, // Green
+        1: { label: t.riskLabels[1], color: "#4aba4d" }, // Middle Green
+        2: { label: t.riskLabels[2], color: "#85ca51" }, // Light Green
+        3: { label: t.riskLabels[3], color: "#fdb931" }, // Orange
+        4: { label: t.riskLabels[4], color: "#fd5431" }  // Red
     };
 
-    // 3) Show the corresponding Content Block
-    // (Assumes .result-block { display: none; } is in Custom CSS)
+    /* ================================================================
+       6) Show corresponding content block
+       ================================================================ */
     var riskKeys = ["ZERO", "ONE", "TWO", "THREE", "FOUR"];
-    var currentId = 'RISK_' + riskKeys[clampedScore];
+    var currentId = "RISK_" + riskKeys[clampedScore];
     var contentEl = document.getElementById(currentId);
-    if (contentEl) { contentEl.style.display = 'block'; }
+    if (contentEl) {
+        contentEl.style.display = "block";
+    }
 
-    // 4) Draw the Tachometer (Canvas)
+    /* ================================================================
+       7) Draw tachometer (Canvas)
+       ================================================================ */
     var canvas = document.getElementById("risk_dashboard_canvas");
     if (canvas && canvas.getContext) {
         var ctx = canvas.getContext("2d");
@@ -172,14 +244,16 @@ Qualtrics.SurveyEngine.addOnReady(function() {
         ctx.fill(needleInner);
 
         ctx.restore();
-
-        // CUSTOM END
-
-        // 5) Update the Text Label below the Gauge
-        var labelEl = document.getElementById("displayRiskLevelLabel");
-        if (labelEl) {
-            labelEl.innerText = riskConfig[clampedScore].label;
-            labelEl.style.color = riskConfig[clampedScore].color;
-        }
     }
+
+
+    /* ================================================================
+       8) Update the Text Label below the Gauge
+       ================================================================ */
+    var labelEl = document.getElementById("displayRiskLevelLabel");
+    if (labelEl) {
+        labelEl.innerText = riskConfig[clampedScore].label;
+        labelEl.style.color = riskConfig[clampedScore].color;
+    }
+
 });
