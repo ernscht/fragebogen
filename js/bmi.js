@@ -1,13 +1,13 @@
 Qualtrics.SurveyEngine.addOnReady(function () {
     /******************************************************************
      * iMpuls Result-Page – Visual Risk Dashboard (multilingual)
-     * Language detection via browser language (default / fallback: German)
+     * Language detection html lang attribute (default / fallback: German)
      ******************************************************************/
 
     /* ================================================================
-       1) Detect browser language
+       1) Detect language
        ================================================================ */
-    var lang = (navigator.language || navigator.userLanguage || "de").toLowerCase();
+    var lang = (document.documentElement.lang || "de").toLowerCase();
     if (lang.indexOf("fr") === 0) {
         lang = "fr";
     } else if (lang.indexOf("it") === 0) {
