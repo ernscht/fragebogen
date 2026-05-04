@@ -34,6 +34,7 @@
 
 .Skin #Logo {
     position: relative;
+    z-index: 1;
     margin: 0 auto;
     padding: 27px 20px;
     max-width: var(--impuls-content-max-width);
@@ -42,6 +43,7 @@
     background-size: min(18%, 110px);
     background-repeat: no-repeat;
     background-position: right 20px center;
+    mix-blend-mode: multiply;
 }
 
 .Skin #Logo::before {
@@ -49,28 +51,29 @@
     width: 0;
     height: 0;
     border-style: dashed solid solid solid;
-    border-width: 0 66px 180px;
+    border-width: 0 80px 250px;
     border-color: rgba(0,153,166,0) rgba(0,153,166,0) rgba(0,153,166,1) rgba(0,153,166,0);
     backface-visibility: hidden;
     transform-style: preserve-3d;
 
-    transform: rotate(-99deg);
-    top: -30px;
-    left: -35px;
+    transform: rotate(-100deg);
+    top: -70px;
+    left: -70px;
     position: absolute;
     opacity: 0.8;
 }
 
 @media (width > 480px) {
     .Skin #Logo::before {
-        border-width: 0 106px 222px;
-        top: -50px;
-        left: -50px;
+        border-width: 0 130px 300px;
+        top: -90px;
+        left: -90px;
     }
 }
 
 .Skin #Logo img {
     position: relative;
+    z-index: 1;
 }
 
 .Skin #HeaderContainer {
