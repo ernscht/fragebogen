@@ -76,6 +76,7 @@
 .Skin #HeaderContainer {
     position: relative;
     height: 160px;
+    margin-bottom: -1px;
     padding: 0;
     background-color: var(--impuls-color-green-background);
     background:
