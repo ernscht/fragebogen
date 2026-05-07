@@ -19,10 +19,6 @@
     --impuls-color-green-background: var(--impuls-color-turquoise-dark);
     --impuls-color-dark-gray-font: var(--impuls-color-dark-gray);
     --impuls-color-gradient-right: #00afbf;
-
-    --impuls-color-old: #3da3ae;
-
-
 }
 
 /* hide */
@@ -262,6 +258,10 @@
     font-size: 18px !important;
 }
 
+.Skin .QuestionText:has(img) h3 {
+    margin-top: 28px;
+}
+
 /* link */
 
 .Skin .QuestionText a {
@@ -294,11 +294,11 @@
     border: none !important;
     border-bottom: 4px solid #00838f !important;
     font-size: 50px !important;
-    font-weight: 700;
-    line-height: 1.33333 !important;
-    color: #00838f !important;
+    font-weight: 800;
+    line-height: 1.3333 !important;
+    color: var(--impuls-color-mid-turquoise) !important;
     text-align: center !important;
-    margin: 20px auto !important;
+    margin: 0 auto 20px auto !important;
     outline: none !important;
     box-shadow: none !important;
 }
