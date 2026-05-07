@@ -424,8 +424,12 @@
     font-family: "Proxima N W01 Bold", sans-serif !important;
 }
 
-canvas#risk_dashboard_canvas {
-    background-color: var(--impuls-color-light-gray) !important;
+#riskDashboard {
+    text-align: center; margin: 20px 0;
+    background-color: var(--impuls-color-light-gray);
+}
+
+#riskDashboardCanvas {
     padding: 24px 22px !important;
     height: 100% !important;
     width: 100% !important;

@@ -125,7 +125,7 @@ Qualtrics.SurveyEngine.addOnReady(function () {
     /* ================================================================
        7) Draw tachometer (Canvas)
        ================================================================ */
-    var canvas = document.getElementById("risk_dashboard_canvas");
+    var canvas = document.getElementById("riskDashboardCanvas");
     if (canvas && canvas.getContext) {
         var ctx = canvas.getContext("2d");
 
