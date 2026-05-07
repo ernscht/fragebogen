@@ -27,6 +27,7 @@
 }
 
 /* start */
+
 .Skin #LogoContainer {
     background-color: #fff;
     margin: 0;
@@ -123,6 +124,7 @@
     border-radius: 0;
     width: 100% !important;
     max-width: var(--impuls-content-max-width) !important;
+    margin-bottom: 80px;
 }
 
 .Skin .SkinInner {
@@ -167,9 +169,12 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
-    margin-bottom: -60px;
+    bottom: -60px;
     text-align: center;
+}
+
+.Skin .LanguageSelectorContainer select {
+    background-color: #fff;
 }
 
 /* Questions */
