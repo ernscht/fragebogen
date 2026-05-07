@@ -127,9 +127,6 @@
     border-radius: 0;
     width: 100% !important;
     max-width: var(--impuls-content-max-width) !important;
-
-    font-family: var(--impuls-font-family);
-    font-optical-sizing: auto;
 }
 
 .Skin .SkinInner {
@@ -196,18 +193,20 @@
     flex-direction: column !important;
 }
 
-.Skin .QuestionText a {
-    text-underline-offset: 0.2em;
-    transition: text-decoration-color 0.3s ease;
+/* typo */
+
+.Skin #SkinContent {
+    font-family: var(--impuls-font-family);
+    font-optical-sizing: auto;
+    font-size: 20px;
+    -webkit-font-smoothing: antialiased;
 }
 
-.Skin .QuestionText a:hover,
-.Skin .QuestionText a:focus-visible {
-    text-decoration-color: var(--impuls-color-green);
-}
-
-.Skin .QuestionText a:focus {
-    outline: none;
+.Skin button,
+.Skin input,
+.Skin select,
+.Skin textarea {
+    font-family: var(--impuls-font-family);
 }
 
 .Skin .QuestionText,
@@ -217,7 +216,7 @@
 .Skin .QuestionOuter fieldset > legend label.QuestionText,
 #EndOfSurvey {
     color: #fff !important;
-    font-size: 16px !important;
+    /*font-size: 20px !important;*/
     /*font-family: var(--impuls-font-family);*/
 }
 
@@ -235,7 +234,7 @@
 .Skin .QuestionText h2,
 .Skin .QuestionText h3,
 .Skin .QuestionText h4 {
-    font-weight: bold !important;
+    font-weight: 700 !important;
     line-height: 1.3 !important;
     margin-bottom: 0.4em;
 }
@@ -262,6 +261,24 @@
 .Skin .QuestionText h4 {
     font-size: 18px !important;
 }
+
+/* link */
+
+.Skin .QuestionText a {
+    text-underline-offset: 0.2em;
+    transition: text-decoration-color 0.3s ease;
+}
+
+.Skin .QuestionText a:hover,
+.Skin .QuestionText a:focus-visible {
+    text-decoration-color: var(--impuls-color-green);
+}
+
+.Skin .QuestionText a:focus {
+    outline: none;
+}
+
+/* */
 
 .Skin .QuestionBody {
     margin-block: 12px !important;
@@ -290,8 +307,10 @@
 }
 
 /* Validation */
+
 .Skin .ValidationError {
     color: #fff !important;
+    font-size: 20px;
     background: transparent;
     text-align: center;
     margin: 0 !important;
@@ -380,7 +399,7 @@
     padding: 20px var(--impuls-content-padding) !important;
 }
 
-#SurveyEngineBody .Skin #Buttons #NextButton,
+.Skin #Buttons #NextButton,
 .Skin #Buttons #PreviousButton {
     display: inline-block;
     padding: 9px 24px 9px 24px !important;
@@ -395,11 +414,10 @@
     border: 2px solid rgb(255, 255, 255) !important;
     /*font-family: var(--impuls-font-family);*/
     font-size: 14px !important;
-    font-weight: 700 !important;
-    line-height: 150% !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
     letter-spacing: 10% !important;
     text-decoration: none !important;
-    -webkit-font-smoothing: antialiased;
 
     text-align: center;
     transition: all 0.2s linear, background-position 0.2s ease-out !important;
