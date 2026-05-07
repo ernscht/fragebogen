@@ -95,7 +95,7 @@ Qualtrics.SurveyEngine.addOnReady(function () {
         bmiDisplay.innerText = bmiValue;
     }
 
-    var bmiClassDisplay = document.getElementById("displayBMIClass");
+    var bmiClassDisplay = document.getElementById("bmiDisplayDescription");
     if (bmiClassDisplay && bmiClass) {
         var bmiLabel = t.bmiClasses[bmiClass] || bmiClass;
         bmiClassDisplay.innerText = t.bmiPrefix + bmiLabel;
