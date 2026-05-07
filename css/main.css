@@ -164,11 +164,11 @@
 }
 
 .Skin .LanguageSelectorContainer {
-    display: none;
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -60px;
+    bottom: 0;
+    margin-bottom: -60px;
     text-align: center;
 }
 
