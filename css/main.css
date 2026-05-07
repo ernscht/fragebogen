@@ -4,6 +4,9 @@
     --impuls-content-padding: 16px;
     --impuls-content-max-width: 800px;
 
+    --impuls-spacing-base: 6px;
+    --impuls-font-family: "Nunito Sans", sans-serif;
+
     --impuls-color-green: #48bfa2;
     --impuls-color-mid-turquoise: #00838f;
     --impuls-color-turquoise: #0099a6;
@@ -19,9 +22,10 @@
 
     --impuls-color-old: #3da3ae;
 
-    --impuls-spacing-base: 6px;
+
 }
 
+/* hide */
 #ProgressBar {
     display: none !important;
 }
@@ -123,6 +127,9 @@
     border-radius: 0;
     width: 100% !important;
     max-width: var(--impuls-content-max-width) !important;
+
+    font-family: var(--impuls-font-family);
+    font-optical-sizing: auto;
 }
 
 .Skin .SkinInner {
@@ -164,6 +171,7 @@
 }
 
 .Skin .LanguageSelectorContainer {
+    display: none;
     position: absolute;
     left: 0;
     right: 0;
@@ -210,7 +218,7 @@
 #EndOfSurvey {
     color: #fff !important;
     font-size: 16px !important;
-    font-family: "Proxima N W01 Bold", sans-serif !important;
+    /*font-family: var(--impuls-font-family);*/
 }
 
 .Skin .QuestionText p {
@@ -326,7 +334,7 @@
 
 .Skin label.SingleAnswer > span,
 .Skin label.MultipleAnswer > span {
-    font-family: "Proxima N W01 Bold", sans-serif !important;
+    /*font-family: var(--impuls-font-family);*/
     font-weight: 500 !important;
     font-size: 18px !important;
     line-height: 1.4 !important;
@@ -385,7 +393,7 @@
     color: #fff !important;
 
     border: 2px solid rgb(255, 255, 255) !important;
-    font-family: "Proxima N W01 Bold", sans-serif !important;
+    /*font-family: var(--impuls-font-family);*/
     font-size: 14px !important;
     font-weight: 700 !important;
     line-height: 150% !important;
@@ -421,7 +429,7 @@
     background-color: #fff !important;
     color: var(--impuls-color-dark-gray-font) !important;
     font-size: 16px !important;
-    font-family: "Proxima N W01 Bold", sans-serif !important;
+    /*font-family: var(--impuls-font-family);*/
 }
 
 #riskDashboard {
