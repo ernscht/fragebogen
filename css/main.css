@@ -441,7 +441,14 @@
     height: 35px !important;
 }
 
-/* divers */
+/* result */
+
+#bmiDisplay {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#bmiDisplayDescription {}
 
 #risk-result-wrapper div {
     background-color: #fff !important;
