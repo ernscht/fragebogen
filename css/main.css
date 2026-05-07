@@ -411,13 +411,13 @@
     background-color: transparent !important;
     color: #fff !important;
 
-    border: 2px solid rgb(255, 255, 255) !important;
-    /*font-family: var(--impuls-font-family);*/
+    border: 2px solid #fff !important;
     font-size: 14px !important;
-    font-weight: 400 !important;
+    font-weight: 600 !important;
     line-height: 1.5 !important;
     letter-spacing: 10% !important;
     text-decoration: none !important;
+    text-transform: uppercase;
 
     text-align: center;
     transition: all 0.2s linear, background-position 0.2s ease-out !important;
