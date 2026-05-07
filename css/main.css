@@ -213,42 +213,31 @@
     font-family: "Proxima N W01 Bold", sans-serif !important;
 }
 
-#risk-result-wrapper div {
-    background-color: #fff !important;
-    color: var(--impuls-color-dark-gray-font) !important;
-    font-size: 16px !important;
-    font-family: "Proxima N W01 Bold", sans-serif !important;
-}
-
-.Skin .QuestionText h2 {
-    font-size: 23px !important;
-    font-weight: bold !important;
-}
-
-.Skin .QuestionText h3 {
-    font-size: 20px !important;
-    font-weight: bold !important;
-    line-height: 1.5 !important;
-    text-align: center !important;
-}
-
-.Skin .QuestionText h4 {
-    font-size: 18px !important;
-    font-weight: bold !important;
+.Skin .QuestionText ol,
+.Skin .QuestionText ul {
+    padding-inline-start: 20px !important;
+    margin: calc(var(--impuls-spacing-base) * 3) 0;
 }
 
 .Skin .QuestionText h1,
 .Skin .QuestionText h2,
 .Skin .QuestionText h3,
 .Skin .QuestionText h4 {
-    margin-bottom: 10px !important;
-    font-weight: 1.2 !important;
+    font-weight: bold !important;
+    line-height: 1.4 !important;
 }
 
-.Skin .QuestionText ol,
-.Skin .QuestionText ul {
-    padding-inline-start: 20px !important;
-    margin: calc(var(--impuls-spacing-base) * 3) 0;
+.Skin .QuestionText h2 {
+    font-size: 23px !important;
+}
+
+.Skin .QuestionText h3 {
+    font-size: 20px !important;
+    text-align: center !important;
+}
+
+.Skin .QuestionText h4 {
+    font-size: 18px !important;
 }
 
 .Skin .QuestionBody {
@@ -277,16 +266,24 @@
     margin-inline: 12px !important;
 }
 
+@media (width < 770px) {
+    .Skin .QuestionText :not(label) h3 {
+        text-align: left !important;
+    }
+}
+
+/* Validation */
 .Skin .ValidationError {
+    color: #fff !important;
     background: transparent;
     text-align: center;
     margin: 0 !important;
 }
 
-@media (width < 770px) {
-    .Skin .QuestionText h3 {
-        text-align: left !important;
-    }
+.Skin .ValidationError::before {
+    content: "⚠";
+    margin-right: 8px;
+    color: #fff;
 }
 
 /* label */
@@ -410,6 +407,13 @@
 }
 
 /* divers */
+
+#risk-result-wrapper div {
+    background-color: #fff !important;
+    color: var(--impuls-color-dark-gray-font) !important;
+    font-size: 16px !important;
+    font-family: "Proxima N W01 Bold", sans-serif !important;
+}
 
 canvas#risk_dashboard_canvas {
     background-color: var(--impuls-color-light-gray) !important;
@@ -596,16 +600,4 @@ hr {
 
 .Skin p {
     margin-bottom: calc(var(--impuls-spacing-base) * 3);
-}
-
-
-/* Validation */
-.Skin .ValidationError {
-    color: #fff !important;
-}
-
-.Skin .ValidationError::before {
-    content: "⚠";
-    margin-right: 8px;
-    color: #fff;
 }
