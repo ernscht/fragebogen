@@ -425,15 +425,20 @@
 }
 
 #riskDashboard {
-    text-align: center; margin: 20px 0;
+    text-align: center;
     background-color: var(--impuls-color-light-gray);
+    padding: 24px 22px !important;
 }
 
 #riskDashboardCanvas {
-    padding: 24px 22px !important;
+
     height: 100% !important;
     width: 100% !important;
-    margin-bottom: 24px !important;
+    max-width: 500px;
+}
+
+#displayRiskLevelLabel {
+    color: var(--impuls-color-dark-gray-font) !important;
 }
 
 .Skin .SystemEndOfSurvey {
