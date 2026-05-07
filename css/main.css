@@ -164,6 +164,7 @@
     width: 100% !important;
     max-width: var(--impuls-content-max-width) !important;
 }
+
 @media print {
     .Skin #SkinContent {
         background-color: transparent;
@@ -221,15 +222,13 @@
     font-family: var(--impuls-font-family);
 }
 
-@media screen {
-    .Skin .QuestionText,
-    .Skin .QuestionText div,
-    .Skin .QuestionText a,
-    .Skin .QuestionOuter fieldset > legend,
-    .Skin .QuestionOuter fieldset > legend label.QuestionText,
-    #EndOfSurvey {
-        color: #fff !important;
-    }
+.Skin .QuestionText,
+.Skin .QuestionText div,
+.Skin .QuestionText a,
+.Skin .QuestionOuter fieldset > legend,
+.Skin .QuestionOuter fieldset > legend label.QuestionText,
+#EndOfSurvey {
+    color: #fff !important;
 }
 
 @media print {
@@ -429,7 +428,7 @@
 .Skin #Buttons #NextButton,
 .Skin #Buttons #PreviousButton {
     display: inline-block;
-    padding: 24px 7px !important;
+    padding: 7px 24px !important;
     box-sizing: border-box;
     vertical-align: middle;
     cursor: pointer;
