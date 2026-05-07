@@ -119,18 +119,11 @@
     }
 }
 
-.Skin #SkinContent {
-    background-color: var(--impuls-color-green-background);
-    border-radius: 0;
-    width: 100% !important;
-    max-width: var(--impuls-content-max-width) !important;
-    margin-bottom: 80px;
-}
-
 .Skin .SkinInner {
     position: relative;
     padding-bottom: 80px;
 }
+
 .Skin .SkinInner::before {
     content: '';
     display: block;
@@ -165,6 +158,18 @@
     }
 }
 
+.Skin #SkinContent {
+    background-color: var(--impuls-color-green-background);
+    border-radius: 0;
+    width: 100% !important;
+    max-width: var(--impuls-content-max-width) !important;
+}
+@media print {
+    .Skin #SkinContent {
+        background-color: transparent;
+    }
+}
+
 .Skin .LanguageSelectorContainer {
     position: absolute;
     left: 0;
@@ -175,6 +180,12 @@
 
 .Skin .LanguageSelectorContainer select {
     background-color: #fff;
+}
+
+@media print {
+    .Skin .LanguageSelectorContainer {
+        display: none;
+    }
 }
 
 /* Questions */
@@ -210,15 +221,26 @@
     font-family: var(--impuls-font-family);
 }
 
-.Skin .QuestionText,
-.Skin .QuestionText div,
-.Skin .QuestionText a,
-.Skin .QuestionOuter fieldset > legend,
-.Skin .QuestionOuter fieldset > legend label.QuestionText,
-#EndOfSurvey {
-    color: #fff !important;
-    /*font-size: 20px !important;*/
-    /*font-family: var(--impuls-font-family);*/
+@media screen {
+    .Skin .QuestionText,
+    .Skin .QuestionText div,
+    .Skin .QuestionText a,
+    .Skin .QuestionOuter fieldset > legend,
+    .Skin .QuestionOuter fieldset > legend label.QuestionText,
+    #EndOfSurvey {
+        color: #fff !important;
+    }
+}
+
+@media print {
+    .Skin .QuestionText,
+    .Skin .QuestionText div,
+    .Skin .QuestionText a,
+    .Skin .QuestionOuter fieldset > legend,
+    .Skin .QuestionOuter fieldset > legend label.QuestionText,
+    #EndOfSurvey {
+        color: #000 !important;
+    }
 }
 
 .Skin .QuestionText p {
@@ -407,7 +429,7 @@
 .Skin #Buttons #NextButton,
 .Skin #Buttons #PreviousButton {
     display: inline-block;
-    padding: 9px 24px 9px 24px !important;
+    padding: 24px 7px !important;
     box-sizing: border-box;
     vertical-align: middle;
     cursor: pointer;
@@ -417,8 +439,9 @@
     color: #fff !important;
 
     border: 2px solid #fff !important;
+    border-radius: 0;
     font-size: 14px !important;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
     line-height: 1.5 !important;
     letter-spacing: 10% !important;
     text-decoration: none !important;
