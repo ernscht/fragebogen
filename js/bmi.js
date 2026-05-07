@@ -250,10 +250,9 @@ Qualtrics.SurveyEngine.addOnReady(function () {
     /* ================================================================
        8) Update the Text Label below the Gauge
        ================================================================ */
-    var labelEl = document.getElementById("displayRiskLevelLabel");
+    var labelEl = document.getElementById("riskDashboardLabel");
     if (labelEl) {
         labelEl.innerText = riskConfig[clampedScore].label;
-        labelEl.style.color = riskConfig[clampedScore].color;
     }
 
 });
