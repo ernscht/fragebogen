@@ -175,8 +175,9 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -60px;
+    bottom: 0;
     text-align: center;
+    transform: translateY(60px);
 }
 
 .Skin .LanguageSelectorContainer select {
