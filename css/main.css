@@ -186,7 +186,7 @@
     border: none;
     border-right: 14px solid transparent;
     padding: 9px 8px 7px 16px;
-    outline: 2px solid var(--impuls-color-green-background);
+    outline: 2px solid var(--impuls-color-dark-gray-font);
     border-radius: 0;
     text-transform: uppercase;
     font-size: 14px;
