@@ -177,15 +177,19 @@
     right: 0;
     bottom: 0;
     text-align: center;
-    transform: translateY(60px);
+    transform: translateY(70px);
 }
 
 .Skin .LanguageSelectorContainer select {
     background-color: #fff;
     border: none;
     border-right: 14px solid transparent;
-    padding: 4px 16px;
+    padding: 4px 12px 4px 16px;
     outline: 2px solid var(--impuls-color-green-background);
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
 }
 
 @media print {
