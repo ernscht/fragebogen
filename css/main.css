@@ -181,10 +181,11 @@
 }
 
 .Skin .LanguageSelectorContainer select {
+    color: var(--impuls-color-dark-gray-font);
     background-color: #fff;
     border: none;
     border-right: 14px solid transparent;
-    padding: 4px 12px 4px 16px;
+    padding: 9px 8px 7px 16px;
     outline: 2px solid var(--impuls-color-green-background);
     border-radius: 0;
     text-transform: uppercase;
