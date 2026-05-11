@@ -6,6 +6,7 @@
 
     --impuls-spacing-base: 6px;
     --impuls-font-family: "Nunito Sans", sans-serif;
+    --impuls-font-size-base: 20px;
 
     --impuls-color-green: #48bfa2;
     --impuls-color-mid-turquoise: #00838f;
@@ -205,6 +206,10 @@
     padding: 0 !important;
 }
 
+.Skin .QuestionOuter:has(.ValidationError) {
+    margin: 0 16px !important;
+}
+
 .Skin .QuestionBody {
     padding-bottom: 0 !important;
 }
@@ -221,7 +226,7 @@
 .Skin #SkinContent {
     font-family: var(--impuls-font-family);
     font-optical-sizing: auto;
-    font-size: 20px;
+    font-size: var(--impuls-font-size-base);
     -webkit-font-smoothing: antialiased;
 }
 
@@ -346,16 +351,31 @@
 
 .Skin .ValidationError {
     color: #fff !important;
-    font-size: 20px;
+    font-size: var(--impuls-font-size-base);
     background: transparent;
-    text-align: center;
     margin: 0 !important;
+    border: 2px solid #fff;
+    padding: 8px;
+    border-radius: 8px;
+    max-width: 400px;
+    position: relative;
+    text-align: left;
+    text-indent: 0;
+    margin: 16px auto !important;
+    padding-left: 38px;
 }
 
 .Skin .ValidationError::before {
     content: "⚠";
     margin-right: 8px;
     color: #fff;
+    height: 100% !important;
+    position: absolute;
+    top: 0;
+    left: 8px;
+    width: 20px;
+    display: flex;
+    align-items: center;
 }
 
 /* label */
@@ -537,7 +557,7 @@ details summary::-webkit-details-marker {
 details summary::before {
     content: "❯";
     color: #fff;
-    font-size: 20px;
+    font-size: var(--impuls-font-size-base);
     position: absolute;
     transition: transform 0.3s ease;
     transform: rotate(90deg);
