@@ -196,7 +196,7 @@
     outline: 2px solid var(--impuls-color-dark-gray-font);
     border-radius: 0;
     text-transform: uppercase;
-    font-size: var(--impuls-font-size-small);
+    font-size: var(--impuls-font-size-s);
     font-weight: 700;
 }
 
@@ -279,11 +279,11 @@
 }
 
 .Skin .QuestionText h2 {
-    font-size: var(--impuls-font-size-large) !important;
+    font-size: var(--impuls-font-size-l) !important;
 }
 
 .Skin .QuestionText h3 {
-    font-size: var(--impuls-font-size-medium) !important;
+    font-size: var(--impuls-font-size-m) !important;
     text-align: center !important;
 }
 
@@ -589,7 +589,7 @@ details + details {
 .details-light p {
     padding-left: 25px;
     padding-top: 5px;
-    font-size: var(--impuls-font-size-small);
+    font-size: var(--impuls-font-size-s);
 }
 
 /* details-box */
@@ -688,13 +688,13 @@ details + details {
 .details-more summary {
     padding-left: 0;
     padding-right: 16px;
-    font-size: var(--impuls-font-size-small);
+    font-size: var(--impuls-font-size-s);
     width: fit-content;
 }
 
 .details-more summary::before {
     right: 0;
-    font-size: var(--impuls-font-size-small);
+    font-size: var(--impuls-font-size-s);
 }
 
 .details-more p {
