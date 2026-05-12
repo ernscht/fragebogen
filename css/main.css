@@ -309,6 +309,10 @@
     margin-top: 28px;
 }
 
+.Skin .DB .QuestionText {
+  font-size: var(--impuls-font-size-base) !important;
+}
+
 /* link */
 
 .Skin .QuestionText a {
@@ -631,6 +635,7 @@ details + details {
 
 .details-box__title {
     font-size: var(--impuls-font-size-base);
+    font-weight: 700;
 }
 
 .details-box summary::before {
@@ -716,3 +721,18 @@ hr {
     margin: calc(var(--impuls-spacing-base) * 4) 0;
 }
 
+/* Anchor */
+
+.Skin a.anchor {
+    font-size: var(--impuls-font-size-base) !important;
+    color: var(--impuls-color-gray) !important;
+    text-decoration: none;
+    text-align: center;
+    margin: calc(var(--impuls-spacing-base) * 6) 0 calc(var(--impuls-spacing-base) * 2);
+}
+
+.Skin a.anchor::before {
+    content: "↓";
+    display: inline-block;
+    margin-right: calc(var(--impuls-spacing-base) * 2);
+}
