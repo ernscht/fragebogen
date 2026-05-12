@@ -206,6 +206,10 @@
     }
 }
 
+.Skin #Questions {
+    overflow: visible;
+}
+
 /* Questions */
 
 .Skin .QuestionOuter {
