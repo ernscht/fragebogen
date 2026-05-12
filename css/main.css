@@ -724,7 +724,7 @@ hr {
 /* Anchor */
 
 .Skin a.anchor {
-    font-size: var(--impuls-font-size-base) !important;
+    font-size: var(--impuls-font-size-s) !important;
     color: var(--impuls-color-gray) !important;
     text-decoration: none;
     text-align: center;
