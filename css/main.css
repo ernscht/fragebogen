@@ -19,12 +19,13 @@
     --impuls-color-turquoise: #0099a6;
     --impuls-color-turquoise-dark: #007884;
     --impuls-color-teal: #5ea2ad;
-    --impuls-color-light-gray: #f3f7f7;
+    --impuls-color-gray-light: #f3f7f7;
     --impuls-color-gray: #dfe0e0;
-    --impuls-color-dark-gray: #484952;
+    --impuls-color-gray-jumbo: #76757e;
+    --impuls-color-gray-dark: #484952;
 
     --impuls-color-green-background: var(--impuls-color-turquoise-dark);
-    --impuls-color-dark-gray-font: var(--impuls-color-dark-gray);
+    --impuls-color-gray-dark-font: var(--impuls-color-gray-dark);
     --impuls-color-gradient-right: #00afbf;
 }
 
@@ -188,12 +189,12 @@
 }
 
 .Skin .LanguageSelectorContainer select {
-    color: var(--impuls-color-dark-gray-font);
+    color: var(--impuls-color-gray-jumbo);
     background-color: #fff;
     border: none;
     border-right: 14px solid transparent;
     padding: 8px 8px 6px 16px;
-    outline: 2px solid var(--impuls-color-dark-gray-font);
+    outline: 2px solid var(--impuls-color-gray-jumbo);
     border-radius: 0;
     text-transform: uppercase;
     font-size: var(--impuls-font-size-s);
@@ -368,7 +369,7 @@
     padding: 8px;
     border-radius: 8px;
     width: 88vw;
-    max-width: 350px;
+    max-width: min(90vw, 400px);
     position: relative;
     text-align: left;
     text-indent: 0;
@@ -526,14 +527,14 @@
 
 #risk-result-wrapper div {
     background-color: #fff !important;
-    color: var(--impuls-color-dark-gray-font) !important;
+    color: var(--impuls-color-gray-dark-font) !important;
     font-size: var(--impuls-font-size-s) !important;
     /*font-family: var(--impuls-font-family);*/
 }
 
 #riskDashboard {
     text-align: center;
-    background-color: var(--impuls-color-light-gray);
+    background-color: var(--impuls-color-gray-light);
     padding: 24px 22px !important;
 }
 
@@ -544,7 +545,7 @@
 }
 
 #riskDashboardLabel {
-    color: var(--impuls-color-dark-gray-font) !important;
+    color: var(--impuls-color-gray-dark-font) !important;
 }
 
 .Skin .SystemEndOfSurvey {
@@ -630,6 +631,8 @@ details + details {
     justify-content: center;
     align-items: center;
     margin-right: 16px;
+    padding-top: 2px;
+    font-size: 18px;
     font-weight: 700;
 }
 
@@ -643,7 +646,7 @@ details + details {
 }
 
 .details-box__wrap {
-    background-color: var(--impuls-color-light-gray);
+    background-color: var(--impuls-color-gray-light);
     padding: 16px 0;
 }
 
@@ -651,7 +654,7 @@ details + details {
     margin: 0 16px 0;
     padding: 16px;
     background-color: #fff;
-    color: var(--impuls-color-dark-gray-font) !important;
+    color: var(--impuls-color-gray-dark-font) !important;
     font-size: var(--impuls-font-size-base) !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
@@ -662,12 +665,12 @@ details + details {
 
 .Skin .details-box__content h2 {
     font-size: var(--impuls-font-size-base) !important;
-    color: var(--impuls-color-dark-gray-font) !important;
+    color: var(--impuls-color-gray-dark-font) !important;
     font-weight: 700;
 }
 
 .Skin .details-box__content p {
-    color: var(--impuls-color-dark-gray-font) !important;
+    color: var(--impuls-color-gray-dark-font) !important;
     margin: 0;
 }
 
@@ -678,7 +681,7 @@ details + details {
 
 .Skin .details-box .details-box__content a:hover,
 .Skin .details-box .details-box__content a:focus-visible {
-    text-decoration-color: var(--impuls-color-dark-gray-font);
+    text-decoration-color: var(--impuls-color-gray-dark-font);
 }
 
 .details-box hr {
